@@ -13,11 +13,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Navbar/>
+        <Navbar />
       </header>
-      <main className="">
+      <main className="bg-[#e5f8ff]">
 
+        <div className="flex flex-col h-[100vh] mx-40 py-10">
+          <div className="flex flex-col self-center mt-32 ">
+            <h1 className="font-OpenSans font-bold text-6xl text-[#333333]">Manage your institute with</h1>
+            <div className="flex flex-row items-center justify-center">
+              <h1 className="font-OpenSans font-bold text-6xl text-[#333333] text-center mt-4 mr-4">the</h1>
+              <h1 className="font-OpenSans font-bold text-6xl text-[#ff6f3d] text-center mt-4">Manaze</h1>
+            </div>
+            <div className="flex flex-row gap-x-5 mt-12 self-center">
+              <button className="px-11 py-4 font-OpenSans text-sm rounded-sm bg-[#ff6f3d] hover:bg-[#ff865c] text-white">Login</button>
+              <button className="px-11 py-4 font-OpenSans text-sm rounded-sm bg-[#444] hover:bg-[#666666] text-white">Register</button>
+            </div>
+          </div>
+        </div>
       </main>
+
     </>
   )
 }

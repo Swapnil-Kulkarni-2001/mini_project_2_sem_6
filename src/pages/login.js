@@ -32,7 +32,7 @@ const login = () => {
           <div className='flex flex-col bg-white shadow-md md:w-[28rem] mx-4 md:mx-0 px-5 md:px-16 py-10 pb-20'>
             <h1 className='text-lg font-semibold'>Login</h1>
 
-            <label className="text-xs font-semibold mt-7">Email Id / Username</label>
+            <label className="text-xs font-semibold mt-7">Email Id</label>
             <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email" className="p-2 border mt-2 focus:outline-[#ff865c]" required />
             <label className="text-xs font-semibold mt-5">Password</label>
             <div className='flex flex-row w-full border-2 mt-2 items-center pr-5 hover:border-[#ff865c]'>

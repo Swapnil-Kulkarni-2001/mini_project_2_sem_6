@@ -4,9 +4,14 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import DepartmentCard from '@/components/admin/DepartmentCard';
 import { FcDepartment } from "react-icons/fc";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { BiGroup } from "react-icons/bi";
+import { useRouter } from 'next/router';
 
 
 const departmentId = () => {
+
+    const router = useRouter();
+
     return (
         <div className="flex flex-col font-OpenSans">
             <Navbar />
@@ -32,10 +37,35 @@ const departmentId = () => {
                             </div>
                         </div>
                     </div>
+                    {/* <div className="flex flex-col gap-y-5 basis-[70%]">
+                        <DepartmentCard />
+                        <DepartmentCard />
+                        <DepartmentCard />
+                    </div> */}
+
                     <div className="flex flex-col gap-y-5 basis-[70%]">
-                        <DepartmentCard />
-                        <DepartmentCard />
-                        <DepartmentCard />
+                        <div onClick={() => {
+                            router.push({
+                                pathname: "/admin/department/[departmentid]/teachingstaff",
+                                query: {
+                                    departmentid: router.query.departmentid
+                                }
+                            }, "/admin/department/[departmentid]/teachingstaff");
+                        }} className="flex flex-row items-center p-5 rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] cursor-pointer">
+                            <BiGroup className="text-2xl text-gray-600 mr-5" />
+                            <h1 className="text-sm">teaching staff</h1>
+                        </div>
+                        <div onClick={() => {
+                            router.push({
+                                pathname: "/admin/department/[departmentid]/nonteachingstaff",
+                                query: {
+                                    departmentid: router.query.departmentid
+                                }
+                            }, "/admin/department/[departmentid]/nonteachingstaff");
+                        }} className="flex flex-row items-center p-5 rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] cursor-pointer">
+                            <BiGroup className="text-2xl text-gray-600 mr-5" />
+                            <h1 className="text-sm">non teaching staff</h1>
+                        </div>
                     </div>
                 </div>
             </div>

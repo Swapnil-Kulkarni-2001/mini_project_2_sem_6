@@ -12,7 +12,13 @@ const DepartmentCard = () => {
     return (
         <div className="flex flex-col bg-[#e2f4f5] px-5 py-5 rounded-xl font-OpenSans  h-40">
             <h1 onClick={()=>{
-                router.push("/admin/department/12");
+                router.push({
+                    pathname : "/admin/department/[departmentid]",
+                    query :{
+                        departmentid : 1212,
+                        data : "dada"
+                    }
+                },"/admin/department/"+1212);
             }} className="text-[#609797] text-sm font-bold cursor-pointer">Information Technology</h1>
             <h1 className="text-[#609797] text-xs mt-2">Head : Swapnil Kulkarni</h1>
 
